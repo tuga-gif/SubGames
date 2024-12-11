@@ -1,0 +1,194 @@
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fontes */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: #f8f9fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+header .logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 2rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Seção de Detalhes do Jogo */
+.game-details {
+    padding: 8rem 2rem 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.p {text-align: center;
+}
+
+/* Cabeçalho do Jogo */
+.game-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #222;
+    font-weight: 800;
+}
+
+.game-header p {
+    font-size: 1.4rem;
+    color: #555;
+}
+
+/* Imagens do Jogo */
+.game-images {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.game-img {
+    width: 32%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.game-img:hover {
+    transform: scale(1.05);
+}
+
+/* Informações do Jogo */
+.game-info {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.game-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.game-info p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.game-info ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.game-info ul li {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+/* Botão de Jogar */
+.button {
+    background: #6d0589;
+    color: #fff;
+    padding: 1rem 3rem;
+    font-size: 1.3rem;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background: #a739c0;
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .game-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-img {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+
+    .game-info {
+        text-align: center;
+    }
+}

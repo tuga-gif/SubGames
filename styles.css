@@ -1,0 +1,298 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: #000000;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background: #333;
+    color: #ffffff;
+    padding: 1.2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 3rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Seção de jogo novo */
+.new-game {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 3rem;
+    background: url('img/Creater hub.jpg') no-repeat center center/cover; /* Imagem de fundo */
+    color: #fff;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Sobreposição para melhorar a legibilidade do texto */
+.new-game::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Sobreposição semitransparente */
+    z-index: 1;
+}
+
+.new-game-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    width: 100%;
+}
+
+.new-game-text {
+    width: 45%;
+    padding-right: 2rem;
+    text-align: left;
+}
+
+.new-game h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(207, 200, 200, 0.6);
+    line-height: 1.2;
+}
+
+.new-game p {
+    font-size: 1.6rem;
+    max-width: 700px;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+    text-shadow: 1px 1px 4px rgba(209, 209, 209, 0.5);
+}
+
+.new-game .button {
+    background: #007bff;
+    color: #fff;
+    padding: 1rem 3rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.new-game .button:hover {
+    background: #0056b3;
+    transform: scale(1.1); /* Aumenta o botão quando passa o mouse */
+}
+
+.new-game-image {
+    width: 45%;
+}
+
+.new-game-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Seção de jogos em destaque */
+.game-list {
+    padding: 4rem 2rem;
+    background: #f1fcff;
+    text-align: center;
+}
+
+.game-list h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.game-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    background: #577a92;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-item img {
+    width: 30%;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 2rem;
+}
+
+.game-info {
+    width: 60%;
+    padding-left: 2rem;
+}
+
+.game-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.game-info p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.game-info .button {
+    background: #007bff;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.game-info .button:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+.game-item:hover {
+    transform: scale(1.02); /* Leve aumento no item */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Efeito de sombra ao passar o mouse */
+}
+
+/* Seção de categorias */
+.category-list {
+    padding: 4rem 2rem;
+    background: #e8f3fe;
+    text-align: center;
+}
+
+.category-list h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.category-item {
+    width: 30%;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.category-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.category-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.category-item p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.category-item .button {
+    background: #007bff;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.category-item .button:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #333;
+    color: #000000;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 1.5rem;
+    }
+
+    .categories {
+        flex-direction: column;
+    }
+
+    .category-item {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}

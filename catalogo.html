@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="icon" type="img.jpg/Fj.jpg" href="img/icon/Fj.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Jogos</title>
+    <link rel="stylesheet" href="css/catalogo.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">SubGames</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="noticias.html">Novidades</a></li>
+            <li><a href="codigos.html">Codigos</a></li>
+            <li><a href="catalogo.html">Catálogos</a></li>
+            <li><a href="melhores-jogos.subgames.html">Melhores Jogos</a></li>
+            <li><a href="Numero.html">Números</a></li>
+            <li><a href="atualizacoes.html" class="active">Atualizações</a></li>
+        </ul>
+    </nav>
+    
+</header>
+
+<!-- Barra de Pesquisa -->
+<div class="search-bar">
+    <input type="text" id="search" placeholder="Pesquisar Jogos..." onkeyup="searchGames()">
+</div>
+
+<!-- Seção de Adicionar Jogo -->
+<div class="main-content" id="addGame">
+    <h1>Adicionar um Jogo</h1>
+    <p>Publique seu jogo e compartilhe com outros jogadores!</p>
+
+    <form id="addGameForm" enctype="multipart/form-data">
+        <input type="text" id="gameName" placeholder="Nome do Jogo" required><br><br>
+        <input type="file" id="gameImageFile" accept="image/*" multiple required><br><br>
+        <input type="file" id="gameVideoFile" accept="video/*"><br><br>
+        <textarea id="gameDescription" placeholder="Descrição do Jogo" required></textarea><br><br>
+        <input type="text" id="gamePrice" placeholder="Preço (Ex: Gratis, 10 Robux)" required><br><br>
+        <input type="text" id="gameCredits" placeholder="Créditos" required><br><br>
+        <input type="url" id="gameLink" placeholder="Link do Jogo (Roblox)" required><br><br>
+
+        <button type="submit">Publicar Jogo</button>
+    </form>
+</div>
+
+<!-- Seção de Jogos Publicados -->
+<div class="main-content" id="games">
+    <h1>Catálogo de Jogos</h1>
+    <div class="game-list" id="game-list">
+        <!-- Jogos serão exibidos aqui dinamicamente -->
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 SubGames. Todos os direitos reservados.</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+    // Função para realizar a busca nos jogos
+    function searchGames() {
+        var input, filter, gameItems, gameTitle, i, txtValue;
+        input = document.getElementById('search');
+        filter = input.value.toUpperCase();
+        gameItems = document.getElementsByClassName('game-item');
+
+        // Loop para percorrer todos os jogos e mostrar ou esconder conforme a busca
+        for (i = 0; i < gameItems.length; i++) {
+            gameTitle = gameItems[i].getElementsByTagName("h3")[0];
+            if (gameTitle) {
+                txtValue = gameTitle.textContent || gameTitle.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    gameItems[i].style.display = "";
+                } else {
+                    gameItems[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
